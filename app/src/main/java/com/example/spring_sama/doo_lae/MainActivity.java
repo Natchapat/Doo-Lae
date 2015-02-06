@@ -10,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -39,6 +41,7 @@ public class MainActivity extends ActionBarActivity {
             Toast.makeText(MainActivity.this, "You Clicked at " +itemname[+position], Toast.LENGTH_SHORT).show();
 
             Intent it = new Intent(getApplicationContext(),Member.class);
+            it.putExtra("position", position);
             it.putExtra("itemname", itemname);
             it.putExtra("imgid", imgid);
             startActivity(it);

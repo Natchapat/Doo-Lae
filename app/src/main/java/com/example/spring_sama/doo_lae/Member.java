@@ -15,6 +15,7 @@ import org.w3c.dom.Text;
  */
 public class Member extends ActionBarActivity {
 
+    int position;
     String[] itemname;
     int[] imgid;
 
@@ -26,6 +27,7 @@ public class Member extends ActionBarActivity {
 //        Intent intent = getIntent();
 
         Bundle extras = getIntent().getExtras();
+        this.position = extras.getInt("position");
         this.itemname =  extras.getStringArray("itemname");
         this.imgid =  extras.getIntArray("imgid");
 
@@ -33,10 +35,20 @@ public class Member extends ActionBarActivity {
         ImageView imageView = (ImageView) findViewById(R.id.imageView);
 
         //txtTitle.setText(itemname[]);
-        //txtTitle.setText( itemname[position]);
-        // imageView.setImageResource(imgid[position]);
+        txtTitle.setText( itemname[position]);
+        imageView.setImageResource(imgid[position]);
 
         //CustomMember adapter = new CustomMember(Member.this, itemname, imgid);
 
+    }
+
+    //this method used to get index of string output will be index of string in array and will return -1 if not found.
+    private int GetStringArrayIndex(String[] set, String input){
+        for(int i=0;i<set.length;i++){
+            if(set.equals(input)){
+                return i;
+            }
+        }
+        return -1;
     }
 }

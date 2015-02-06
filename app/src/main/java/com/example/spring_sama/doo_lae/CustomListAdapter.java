@@ -13,8 +13,8 @@ package com.example.spring_sama.doo_lae;
 public class CustomListAdapter extends ArrayAdapter<String>{
     private final Activity context;
     private final String[] itemname;
-    private final Integer[] imgid;
-    public CustomListAdapter(Activity context,String[] itemname, Integer[] imgid) {
+    private final int[] imgid;
+    public CustomListAdapter(Activity context,String[] itemname, int[] imgid) {
         super(context, R.layout.mylist, itemname);
         this.context = context;
         this.itemname = itemname;

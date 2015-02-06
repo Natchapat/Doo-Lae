@@ -1,5 +1,6 @@
 package com.example.spring_sama.doo_lae;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -22,7 +23,7 @@ public class MainActivity extends ActionBarActivity {
             "UC Browser"
     };
 
-    Integer[] imgid= {R.drawable.g,R.drawable.d,R.drawable.f,R.drawable.a,R.drawable.r};
+    int[] imgid= {R.drawable.g,R.drawable.d,R.drawable.f,R.drawable.a,R.drawable.r};
 
 
     @Override
@@ -36,6 +37,12 @@ public class MainActivity extends ActionBarActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
             Toast.makeText(MainActivity.this, "You Clicked at " +itemname[+position], Toast.LENGTH_SHORT).show();
+
+            Intent it = new Intent(getApplicationContext(),Member.class);
+            it.putExtra("itemname", itemname);
+            it.putExtra("imgid", imgid);
+            startActivity(it);
+
         }
     });
     }

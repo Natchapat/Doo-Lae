@@ -18,12 +18,14 @@ public class MainActivity extends ActionBarActivity {
     ListView list;
 
     String[] itemname ={
-            "Safari",
-            "Camera",
-            "Global",
-            "FireFox",
-            "UC Browser"
+            "Mac",
+            "Boom",
+            "Moo",
+            "Taming",
+            "Micky"
     };
+
+    String homename ="Home-A";
 
     int[] imgid= {R.drawable.g,R.drawable.d,R.drawable.f,R.drawable.a,R.drawable.r};
 
@@ -44,6 +46,7 @@ public class MainActivity extends ActionBarActivity {
             it.putExtra("position", position);
             it.putExtra("itemname", itemname);
             it.putExtra("imgid", imgid);
+            it.putExtra("homename",homename);
             startActivity(it);
 
         }

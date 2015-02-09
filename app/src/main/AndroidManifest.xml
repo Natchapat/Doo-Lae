@@ -17,6 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Member"></activity>
+        <activity android:name=".Medical"></activity>
+        <activity android:name=".Location"></activity>
+        <activity android:name=".Schedule"></activity>
     </application>
 
 </manifest>

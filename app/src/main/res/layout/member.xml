@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/imageView"
+        android:id="@+id/icon"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -18,9 +21,74 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Text"
-        android:id="@+id/textView"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/name"
         android:textSize="20sp"
-        />
+        android:layout_alignTop="@+id/icon"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_marginLeft="20dp"
+        android:layout_toEndOf="@+id/icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/home"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignStart="@+id/name" />
+
+
+            <com.dd.processbutton.FlatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medical Detail"
+                android:id="@+id/medical"
+                android:layout_marginTop="44dp"
+                custom:pb_colorNormal="#ffc4c1c1"
+                custom:pb_colorPressed="#ff7b7b7b"
+                android:layout_marginLeft="20dp"
+                android:textSize="14sp"
+                android:layout_below="@+id/icon"
+                    />
+
+            <com.dd.processbutton.FlatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schedule"
+                android:id="@+id/schedule"
+                custom:pb_colorNormal="#ffc4c1c1"
+                custom:pb_colorPressed="#ff7b7b7b"
+                android:layout_alignTop="@+id/medical"
+                android:layout_toRightOf="@+id/medical"
+                android:layout_marginLeft="15dp"
+                android:textSize="14sp"
+                    />
+
+            <com.dd.processbutton.FlatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:id="@+id/location"
+                custom:pb_colorNormal="#ffc4c1c1"
+                custom:pb_colorPressed="#ff7b7b7b"
+                android:layout_alignTop="@+id/schedule"
+                android:layout_toRightOf="@+id/schedule"
+                android:textSize="14sp"
+                android:layout_marginLeft ="15dp" />
+
+
+        <at.markushi.ui.CircleButton
+            android:layout_width="150dip"
+            android:layout_height="150dip"
+            android:src="@drawable/call_icon"
+            custom:cb_color="#99CC00"
+            custom:cb_pressedRingWidth="12dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="79dp" />
+
+
+
 </RelativeLayout>

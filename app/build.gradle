@@ -24,4 +24,11 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+    compile 'me.grantland:autofittextview:0.2.0'
+    compile 'com.github.eluleci:flatui:3.0.0'
+    compile 'com.pnikosis:materialish-progress:1.2'
+    compile 'info.hoang8f:fbutton:1.0.5'
+    compile 'com.github.traex.rippleeffect:library:1.2.4'
+    compile 'com.github.dmytrodanylyk.android-process-button:library:1.0.3'
+    compile 'com.github.markushi:circlebutton:1.1'
 }

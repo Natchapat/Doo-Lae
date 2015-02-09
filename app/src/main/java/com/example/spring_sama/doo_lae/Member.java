@@ -50,6 +50,7 @@ public class Member extends ActionBarActivity {
         medicaldetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(Member.this,itemname[+position]+" Medical Detail", Toast.LENGTH_SHORT).show();
                 Intent it = new Intent(getApplicationContext(),Medical.class);
                 startActivity(it);
             }
@@ -59,6 +60,7 @@ public class Member extends ActionBarActivity {
         schedulist.setOnClickListener(new View.OnClickListener(){
            @Override
            public void onClick(View v) {
+               Toast.makeText(Member.this,itemname[+position]+" Schedule", Toast.LENGTH_SHORT).show();
                Intent it = new Intent(getApplicationContext(),Schedule.class);
                startActivity(it);
             }
@@ -68,8 +70,17 @@ public class Member extends ActionBarActivity {
         locational.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                Toast.makeText(Member.this,"Location "+itemname[+position], Toast.LENGTH_SHORT).show();
                 Intent it = new Intent(getApplicationContext(),Location.class);
                 startActivity(it);
+            }
+        });
+
+        Button calling = (Button) findViewById(R.id.call);
+        calling.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Member.this,"Calling to "+itemname[+position], Toast.LENGTH_SHORT).show();
             }
         });
 

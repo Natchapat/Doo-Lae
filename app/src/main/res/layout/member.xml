@@ -79,15 +79,18 @@
                 android:layout_marginLeft ="15dp" />
 
 
-        <at.markushi.ui.CircleButton
+        <com.dd.processbutton.FlatButton
             android:layout_width="150dip"
             android:layout_height="150dip"
-            android:src="@drawable/call_icon"
-            custom:cb_color="#99CC00"
-            custom:cb_pressedRingWidth="12dip"
+            android:text="Call"
+            android:textSize="20sp"
+            custom:pb_colorNormal="#ffc4c1c1"
+            custom:pb_colorPressed="#ff7b7b7b"
+            custom:pb_cornerRadius="150dp"
+            android:id="@+id/call"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="79dp" />
+            android:layout_marginBottom="75dp" />
 
 
 

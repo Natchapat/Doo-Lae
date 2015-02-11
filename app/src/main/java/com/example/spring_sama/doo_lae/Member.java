@@ -52,6 +52,8 @@ public class Member extends ActionBarActivity {
             public void onClick(View view) {
                 Toast.makeText(Member.this,itemname[+position]+" Medical Detail", Toast.LENGTH_SHORT).show();
                 Intent it = new Intent(getApplicationContext(),Medical.class);
+                it.putExtra("position", position);
+                it.putExtra("itemname", itemname);
                 startActivity(it);
             }
         });
@@ -83,6 +85,8 @@ public class Member extends ActionBarActivity {
                 Toast.makeText(Member.this,"Calling to "+itemname[+position], Toast.LENGTH_SHORT).show();
             }
         });
+
+
 
 
     }

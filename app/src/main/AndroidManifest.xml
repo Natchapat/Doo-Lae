@@ -20,6 +20,9 @@
         <activity android:name=".Medical"></activity>
         <activity android:name=".Location"></activity>
         <activity android:name=".Schedule"></activity>
+        <activity android:name=".Adding"></activity>
+        <activity android:name=".Edit"></activity>
+        <activity android:name=".MenuList"></activity>
     </application>
 
 </manifest>

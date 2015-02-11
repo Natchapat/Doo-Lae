@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:layout_marginLeft ="15dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:id="@+id/time" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:layout_marginLeft ="15dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:id="@+id/event" />
+
+    <com.cengalabs.flatui.views.FlatToggleButton
+        android:id="@+id/swich"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:checked="true"
+        flatui:fl_space="9dp"
+        android:layout_marginLeft ="60dp"
+        flatui:fl_cornerRadius="12dp" />
+
+</LinearLayout>

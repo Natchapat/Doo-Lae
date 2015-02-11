@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="HH:MM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alarmtime"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:textSize="18sp"
+        />
+
+    <com.dd.processbutton.FlatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Time"
+        android:id="@+id/changetime"
+        android:layout_marginRight="69dp"
+        android:layout_marginEnd="69dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="35dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DD:MM:YY"
+        android:id="@+id/textView"
+        android:layout_below="@+id/changetime"
+        android:layout_alignLeft="@+id/alarmtime"
+        android:layout_alignStart="@+id/alarmtime"
+        android:layout_marginTop="50dp"
+        android:textSize="18sp"
+        />
+
+    <com.dd.processbutton.FlatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Date"
+        android:id="@+id/changedate"
+        android:layout_below="@+id/changetime"
+        android:layout_alignLeft="@+id/changetime"
+        android:layout_alignStart="@+id/changetime"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event"
+        android:id="@+id/eventt"
+        android:layout_below="@+id/changedate"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginTop="44dp"
+        android:textSize="18sp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="20"
+        android:lines="3"
+        android:id="@+id/editText"
+        android:layout_alignTop="@+id/eventt"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarm"
+        android:id="@+id/alarm"
+        android:layout_marginTop="65dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/editText"
+        android:layout_alignLeft="@+id/eventt"
+        android:layout_alignStart="@+id/eventt" />
+
+    <com.cengalabs.flatui.views.FlatToggleButton
+        android:id="@+id/swich"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:checked="true"
+        flatui:fl_space="9dp"
+        flatui:fl_cornerRadius="12dp"
+        android:layout_alignBottom="@+id/alarm"
+        android:layout_alignLeft="@+id/changedate"
+        android:layout_alignStart="@+id/changedate" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/saving"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/cancel"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            />
+
+
+</RelativeLayout>

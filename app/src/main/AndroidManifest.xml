@@ -9,6 +9,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,13 +17,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Member"></activity>
-        <activity android:name=".Medical"></activity>
-        <activity android:name=".Location"></activity>
-        <activity android:name=".Schedule"></activity>
-        <activity android:name=".Adding"></activity>
-        <activity android:name=".Edit"></activity>
-        <activity android:name=".MenuList"></activity>
+        <activity android:name=".Member" android:screenOrientation="portrait">></activity>
+        <activity android:name=".Medical" android:screenOrientation="portrait">></activity>
+        <activity android:name=".Location" android:screenOrientation="portrait">></activity>
+        <activity android:name=".Schedule" android:screenOrientation="portrait">></activity>
+        <activity android:name=".Adding" android:screenOrientation="portrait">></activity>
+        <activity android:name=".Edit" android:screenOrientation="portrait">></activity>
+        <activity android:name=".MenuList" android:screenOrientation="portrait">></activity>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 </manifest>

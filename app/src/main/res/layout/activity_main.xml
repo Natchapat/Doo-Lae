@@ -2,10 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#ffd4d4d4"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,30 +17,31 @@
         android:padding="16dp"
         android:gravity="center"
         android:layout_centerInParent="true"
-        android:background="#ff8c83ff">
+        android:background="#ff52529e">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/header"
-            android:layout_marginBottom="16dp"/>
+            android:src="@drawable/header22"
+            android:layout_marginBottom="5dp"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:id="@+id/username"
-            android:hint="USERNAME"
+            android:hint="ชื่อผู้ใช้"
             android:textColor="#ffececec"
             android:textColorHint="#ffececec"
+            android:layout_marginBottom="12dp"
             />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
+            android:padding="20dp"
             android:id="@+id/homename"
-            android:hint="HOME NAME"
+            android:hint="ชื่อบ้าน"
             android:textColor="#ffececec"
             android:textColorHint="#ffececec"
             />
@@ -47,7 +51,7 @@
             android:id="@+id/button_login"
             android:background="#ffececec"
             android:textColor="#ff787878"
-            android:text="Log In"
+            android:text="เข้าสู่ระบบ"
             android:textSize="20sp"
             android:layout_marginTop="16dp"
             custom:pb_colorNormal="#ffececec"

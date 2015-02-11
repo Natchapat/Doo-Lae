@@ -18,7 +18,9 @@ import android.widget.Toast;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
@@ -40,7 +42,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-        WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
         user = (EditText) findViewById(R.id.username);
@@ -50,7 +52,7 @@ public class MainActivity extends ActionBarActivity {
         ChkLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                if(NoConfig){
+                if (NoConfig) {
                     userName = user.getText().toString();
                     homeName = home.getText().toString();
                 }
@@ -75,6 +77,7 @@ public class MainActivity extends ActionBarActivity {
                     it.putExtra("userName", userName);
                     it.putExtra("homeName", homeName);
                     startActivity(it);
+                    Toast.makeText(getApplicationContext(), "ยินดีต้อนรับ " + userName, Toast.LENGTH_LONG).show();
                     finish();
                 } else {
                     Toast.makeText(getApplicationContext(), "Invalid input, Please Check and try again", Toast.LENGTH_LONG).show();
@@ -83,13 +86,12 @@ public class MainActivity extends ActionBarActivity {
         });
 
         File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
-        File file = new File(path,"careu_config");
-        try (BufferedReader br = new BufferedReader(new FileReader(file)))
-        {
+        File file = new File(path, "doolae_config");
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String sCurrentLine;
             int line = 1;
             while ((sCurrentLine = br.readLine()) != null) {
-                if(line == 1) {
+                if (line == 1) {
                     String[] temp = sCurrentLine.split(",");
                     userName = temp[0];
                     homeName = temp[1];
@@ -103,6 +105,25 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+    public void writer(String msg, Boolean newfile, String filename) {
+        File path = Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_DOCUMENTS);
+        File file = new File(path, filename); // log file
+
+
+        FileWriter writer;
+        //String msg = "hello222";
+
+        try {        // write log
+            path.mkdirs();
+            writer = new FileWriter(file, newfile);     // true = continure , false = new file
+            PrintWriter printer = new PrintWriter(writer);
+            printer.append(msg);
+            //printer.println();
+            printer.close();
+        } catch (IOException e) {
+        }
+    }
 
 
     @Override
@@ -127,3 +148,4 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+

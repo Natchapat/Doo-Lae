@@ -22,7 +22,7 @@ public class MenuList extends ActionBarActivity {
             "Micky"
     };
 
-    String homename ="Home-A";
+    String homename;
 
     int[] imgid= {R.drawable.g,R.drawable.d,R.drawable.f,R.drawable.a,R.drawable.r};
 
@@ -31,6 +31,9 @@ public class MenuList extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menulist);
+
+        Bundle extras = getIntent().getExtras();
+        this.homename = extras.getString("homeName");
 
         CustomListAdapter adapter = new CustomListAdapter(MenuList.this, itemname, imgid);
         list=(ListView)findViewById(R.id.list);

@@ -56,7 +56,7 @@ public class MainActivity extends ActionBarActivity {
                     userName = user.getText().toString();
                     homeName = home.getText().toString();
                 }
-                String link = "http://202.44.12.175/doolae-response/elder_check_login.php?eldername=" + userName + "&homename=" + homeName;
+                String link = "http://202.44.12.175/doolae-response/care_check_login.php?username=" + userName + "&homename=" + homeName;
                 DownloadData content = new DownloadData();
                 content.execute(link);
 
@@ -73,6 +73,7 @@ public class MainActivity extends ActionBarActivity {
                 //check
                 if (result.equals("true")) {
                     //do in this
+                    writer(userName + "," + homeName, false, "doolae_config");
                     Intent it = new Intent(getApplicationContext(), MenuList.class);
                     it.putExtra("userName", userName);
                     it.putExtra("homeName", homeName);
@@ -116,7 +117,7 @@ public class MainActivity extends ActionBarActivity {
 
         try {        // write log
             path.mkdirs();
-            writer = new FileWriter(file, newfile);     // true = continure , false = new file
+            writer = new FileWriter(file, newfile);     // true = continue , false = new file
             PrintWriter printer = new PrintWriter(writer);
             printer.append(msg);
             //printer.println();

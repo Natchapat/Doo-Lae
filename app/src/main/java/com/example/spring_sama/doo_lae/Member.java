@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -80,7 +81,7 @@ public class Member extends ActionBarActivity {
             }
         });
 
-        Button calling = (Button) findViewById(R.id.call);
+        ImageView calling = (ImageView) findViewById(R.id.call);
         calling.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

@@ -30,8 +30,8 @@ public class Medical extends ActionBarActivity {
         this.position = extras.getInt("position");
         this.edit_med = extras.getStringArray("edit_medical");
 
-        //medi = (TextView) findViewById(R.id.mede);
-        //medi.setText(itemname[position] + " Medical Detail");
+        medi = (TextView) findViewById(R.id.mede);
+        medi.setText(itemname[position] + " Medical Detail");
         det = (TextView) findViewById(R.id.detail);
         det.setText(edit_med[position]);
         //medicall[position] = edit_med[position];

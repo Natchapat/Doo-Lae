@@ -13,9 +13,12 @@ import android.widget.TextView;
  */
 public class Medical extends ActionBarActivity {
 
+    public TextView det;
+    public  TextView medi;
+    String[] edit_med;
     String[] itemname;
     int position;
-    String[] medicall = {"a","b","c","d","e"};
+    //String[] medicall = {"a","b","c","d","e"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,17 +28,20 @@ public class Medical extends ActionBarActivity {
         Bundle extras = getIntent().getExtras();
         this.itemname =  extras.getStringArray("itemname");
         this.position = extras.getInt("position");
+        this.edit_med = extras.getStringArray("edit_medical");
 
-
-        TextView medi = (TextView) findViewById(R.id.mede);
-        medi.setText(itemname[position] + " Medical Detail");
-        TextView det = (TextView) findViewById(R.id.detail);
-        det.setText(medicall[position]);
+        //medi = (TextView) findViewById(R.id.mede);
+        //medi.setText(itemname[position] + " Medical Detail");
+        det = (TextView) findViewById(R.id.detail);
+        det.setText(edit_med[position]);
+        //medicall[position] = edit_med[position];
         Button edit = (Button) findViewById(R.id.editmed);
         edit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent it  = new Intent(getApplicationContext(),Edit.class);
+                it.putExtra("edit_medical",edit_med);
+                it.putExtra("position",position);
                 startActivity(it);
             }
         });

@@ -22,6 +22,7 @@ public class Member extends ActionBarActivity {
     int[] imgid;
     String[] medical;
     String homename;
+    String[] edit_medical = {"a","b","c","d","e"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,7 @@ public class Member extends ActionBarActivity {
                 Intent it = new Intent(getApplicationContext(),Medical.class);
                 it.putExtra("position", position);
                 it.putExtra("itemname", itemname);
+                it.putExtra("edit_medical",edit_medical);
                 startActivity(it);
             }
         });

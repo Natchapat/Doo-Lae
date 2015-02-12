@@ -17,12 +17,12 @@
         android:padding="16dp"
         android:gravity="center"
         android:layout_centerInParent="true"
-        android:background="#ff52529e">
+        android:background="#ff3b3b6a">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/header22"
+            android:src="@drawable/header"
             android:layout_marginBottom="5dp"/>
 
         <EditText

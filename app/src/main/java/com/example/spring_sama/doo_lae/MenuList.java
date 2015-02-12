@@ -32,6 +32,8 @@ public class MenuList extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menulist);
 
+
+
         Bundle extras = getIntent().getExtras();
         this.homename = extras.getString("homeName");
 

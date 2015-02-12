@@ -124,6 +124,8 @@ public class MainActivity extends ActionBarActivity {
             printer.close();
         } catch (IOException e) {
         }
+
+
     }
 
 

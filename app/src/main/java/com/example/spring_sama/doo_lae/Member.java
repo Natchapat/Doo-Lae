@@ -1,6 +1,8 @@
 package com.example.spring_sama.doo_lae;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -29,6 +31,11 @@ public class Member extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.member);
+
+        android.support.v7.app.ActionBar setActionBar = getSupportActionBar();
+        setActionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#184e8e")));
+        setActionBar.setDisplayShowCustomEnabled(true);
+        setActionBar.setCustomView(R.layout.action_bar);
 
 //        Intent intent = getIntent();
 

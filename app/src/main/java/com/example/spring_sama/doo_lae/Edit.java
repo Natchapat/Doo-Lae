@@ -1,6 +1,8 @@
 package com.example.spring_sama.doo_lae;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -17,6 +19,8 @@ import java.net.URL;
  */
 public class Edit extends ActionBarActivity {
 
+
+
     //String[] medical;
     String[] edit_medical;
     int position;
@@ -31,11 +35,13 @@ public class Edit extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit);
 
-
+        android.support.v7.app.ActionBar setActionBar = getSupportActionBar();
+        setActionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#184e8e")));
+        setActionBar.setDisplayShowCustomEnabled(true);
+        setActionBar.setCustomView(R.layout.action_bar);
 
         Bundle extras = getIntent().getExtras();
         this.position = extras.getInt("position");
-        //this.medical = extras.getStringArray("medicall");
         this.edit_medical=extras.getStringArray("edit_medical");
 
         edittext = (EditText) findViewById(R.id.edittext);
@@ -69,6 +75,17 @@ public class Edit extends ActionBarActivity {
 
         });
 
+        cancell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent it = new Intent(getApplicationContext(),Medical.class);
+                startActivity(it);
+            }
+
+        });
+
 
     }
+
 }

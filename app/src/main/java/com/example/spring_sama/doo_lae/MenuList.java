@@ -78,7 +78,6 @@ public class MenuList extends ActionBarActivity {
                 it.putExtra("imgid", imgid);
                 it.putExtra("homename",homename);
                 startActivity(it);
-
             }
         });
     }

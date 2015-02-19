@@ -22,14 +22,12 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="75dp" />
 
-    <com.dd.processbutton.FlatButton
+    <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add"
         android:id="@+id/add"
-        custom:pb_colorNormal="#ffececec"
-        custom:pb_colorPressed="#ffc4c1c1"
         android:textColor="#505050"
         android:layout_below="@+id/textClock"
         android:layout_alignRight="@+id/textClock"

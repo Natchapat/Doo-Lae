@@ -42,14 +42,12 @@
         android:layout_alignStart="@+id/name" />
 
 
-            <com.dd.processbutton.FlatButton
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Schedule"
                 android:id="@+id/schedule"
                 android:layout_marginTop="44dp"
-                custom:pb_colorNormal="#ffececec"
-                custom:pb_colorPressed="#ffc4c1c1"
                 android:textColor="#505050"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="20dp"
@@ -57,25 +55,21 @@
                 android:layout_below="@+id/icon"
                     />
 
-            <com.dd.processbutton.FlatButton
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Medical Detail"
                 android:id="@+id/medical"
-                custom:pb_colorNormal="#ffececec"
-                custom:pb_colorPressed="#ffc4c1c1"
                 android:textColor="#505050"
                 android:layout_alignTop="@+id/location"
                 android:layout_centerHorizontal="true"
                 android:textSize="14sp" />
 
-            <com.dd.processbutton.FlatButton
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Location"
                 android:id="@+id/location"
-                custom:pb_colorNormal="#ffececec"
-                custom:pb_colorPressed="#ffc4c1c1"
                 android:textColor="#505050"
                 android:layout_alignTop="@+id/schedule"
                 android:layout_alignParentRight="true"

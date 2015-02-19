@@ -21,7 +21,7 @@
 
         />
 
-    <com.dd.processbutton.FlatButton
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Change Time"
@@ -31,8 +31,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="35dp"
-        flatui:pb_colorNormal="#ffececec"
-        flatui:pb_colorPressed="#ffc4c1c1"
         android:textColor="#505050"
         />
 
@@ -48,7 +46,7 @@
         android:textSize="18sp"
         />
 
-    <com.dd.processbutton.FlatButton
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Change Date"
@@ -57,8 +55,6 @@
         android:layout_alignLeft="@+id/changetime"
         android:layout_alignStart="@+id/changetime"
         android:layout_marginTop="35dp"
-        flatui:pb_colorNormal="#ffececec"
-        flatui:pb_colorPressed="#ffc4c1c1"
         android:textColor="#505050"
         />
 
@@ -96,21 +92,18 @@
         android:layout_alignLeft="@+id/eventt"
         android:layout_alignStart="@+id/eventt" />
 
-    <com.cengalabs.flatui.views.FlatToggleButton
+    <Switch
         android:id="@+id/swich"
-        android:layout_width="48dp"
-        android:layout_height="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:checked="true"
-        flatui:fl_space="9dp"
-        flatui:fl_cornerRadius="12dp"
         android:layout_alignBottom="@+id/alarm"
         android:layout_alignLeft="@+id/changedate"
         android:layout_alignStart="@+id/changedate"
-        flatui:fl_theme="@array/deep"
         />
 
 
-        <com.dd.processbutton.FlatButton
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Save"
@@ -119,12 +112,10 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="20dp"
-            flatui:pb_colorNormal="#ffececec"
-            flatui:pb_colorPressed="#ffc4c1c1"
             android:textColor="#505050"
             />
 
-        <com.dd.processbutton.FlatButton
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cancel"
@@ -133,8 +124,6 @@
             android:layout_alignParentRight="true"
             android:layout_marginBottom="20dp"
             android:layout_marginRight="20dp"
-            flatui:pb_colorNormal="#ffececec"
-            flatui:pb_colorPressed="#ffc4c1c1"
             android:textColor="#505050"
             />
 

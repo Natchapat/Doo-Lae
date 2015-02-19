@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.net.URL;
+import java.util.concurrent.ExecutionException;
 
 /**
  * Created by Spring-Sama on 11-Feb-15.
@@ -22,10 +23,9 @@ public class Edit extends ActionBarActivity {
 
 
     //String[] medical;
-    String[] edit_medical;
-    int position;
-
-    String temp="";
+    String edit_medical;
+    //int position;
+    String name;
 
     public EditText edittext;
     public TextView txt;
@@ -41,36 +41,32 @@ public class Edit extends ActionBarActivity {
         setActionBar.setCustomView(R.layout.action_bar);
 
         Bundle extras = getIntent().getExtras();
-        this.position = extras.getInt("position");
-        this.edit_medical=extras.getStringArray("edit_medical");
+        //this.position = extras.getInt("position");
+        this.edit_medical=extras.getString("edit_medical");
+        this.name=extras.getString("name");
 
         edittext = (EditText) findViewById(R.id.edittext);
-        edittext.setText(edit_medical[position]);
+        edittext.setText(edit_medical);
 
         Button save = (Button) findViewById(R.id.save);
         Button cancell = (Button) findViewById(R.id.cancell);
 
         txt = (TextView) findViewById(R.id.detail);
-//        final String URLsend = "http://202.44.12.175/doolae-response/edit_medical.php";
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
                 Toast.makeText(Edit.this, "Save Success", Toast.LENGTH_SHORT).show();
-                Intent it = new Intent(getApplicationContext(),Medical.class);
-                edit_medical[position] = edittext.getText().toString();
-                temp = edit_medical[position];
-                Log.d("CheckString", String.valueOf(position));
-                Log.d("CheckString", temp);
-                it.putExtra("edit_medical",edit_medical);
-                it.putExtra("position",position);
 
-                String intPos = String.valueOf(position);
-                String data = String.valueOf(edit_medical);
+                final String temp = edittext.getText().toString();
+                String link = "http://202.44.12.175/doolae-response/edit_medical.php?name=" +name+"&home=Home-A&data="+temp;
+                DownloadData content = new DownloadData();
+                content.execute(link);
 
-                new SendHTTP().execute(String.valueOf(position+1),temp);
-                startActivity(it);
+                Log.d("link", link);
+                finish();
+
             }
 
         });
@@ -79,8 +75,7 @@ public class Edit extends ActionBarActivity {
             @Override
             public void onClick(View view)
             {
-                Intent it = new Intent(getApplicationContext(),Medical.class);
-                startActivity(it);
+                finish();
             }
 
         });

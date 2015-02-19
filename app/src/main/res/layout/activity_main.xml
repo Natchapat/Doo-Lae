@@ -45,7 +45,7 @@
             android:textColor="#ffececec"
             android:textColorHint="#ffececec"
             />
-        <com.dd.processbutton.FlatButton
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button_login"
@@ -53,9 +53,7 @@
             android:textColor="#ff787878"
             android:text="เข้าสู่ระบบ"
             android:textSize="20sp"
-            android:layout_marginTop="16dp"
-            custom:pb_colorNormal="#ffececec"
-            custom:pb_colorPressed="#ffc4c1c1"/>
+            android:layout_marginTop="16dp"/>
 
     </LinearLayout>
 

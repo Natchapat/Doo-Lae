@@ -29,7 +29,7 @@ public class MenuList extends ActionBarActivity {
 
     String homename;
 
-    int[] imgid= {R.drawable.g,R.drawable.d,R.drawable.f};
+    int[] imgid= {R.drawable.boy,R.drawable.girl,R.drawable.boy,R.drawable.boy,R.drawable.boy,R.drawable.boy};
 
 
     @Override
